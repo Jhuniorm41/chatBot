@@ -1,3 +1,4 @@
+import 'package:AseSoft/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'pages/chat.dart';
@@ -12,14 +13,16 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int pageIndex = 1;
 
   final HomePageDialogflow chat = new HomePageDialogflow();
+  final Home home = new Home();
 
-  Widget _showPage = new HomePageDialogflow();
+  Widget _showPage = new Home();
   GlobalKey _bottomNavigationKey = GlobalKey();
 
   Widget _pageChooser(int page) {
     switch (page) {
       case 2: return chat;
       break;
+      case 1: return home;
     }
   }
 
