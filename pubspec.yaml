@@ -1,5 +1,5 @@
-name: chatbot
-description: A new Flutter application.
+name: AseSoft
+description: Asesor de Tramites.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -28,7 +28,13 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  curved_navigation_bar: ^0.3.1
+  flutter_launcher_icons: "^0.7.3"
 
+flutter_icons:
+  ios: true
+  android: true
+  image_path: "assets/logo.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -79,7 +79,7 @@ class _HomePageDialogflow extends State<HomePageDialogflow> {
     return new Scaffold(
       appBar: new AppBar(
         centerTitle: true,
-        title: new Text("Asesoria de Tramites"),
+        title: new Text(" Consulta AseSoft"),
       ),
       body: new Column(children: <Widget>[
         new Flexible(
@@ -107,10 +107,18 @@ class ChatMessage extends StatelessWidget {
   final bool type;
 
   List<Widget> otherMessage(context) {
+    final logo = Hero(
+      tag: 'hero',
+      child: CircleAvatar(
+        backgroundColor: Colors.transparent,
+        radius: 70.0,
+        child: Image.asset('assets/logo.png'),
+      ),
+    );
     return <Widget>[
       new Container(
         margin: const EdgeInsets.only(right: 16.0),
-        child: new CircleAvatar(child: new Text('B')),
+        child: new CircleAvatar(child: logo),
       ),
       new Expanded(
         child: new Column(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'chat.dart';
+import 'appBar.dart';
 
 class Login extends StatefulWidget{
   _LoginState createState() => _LoginState();
@@ -39,7 +39,7 @@ class _LoginState extends State<Login>{
 
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => HomePageDialogflow()),
+      MaterialPageRoute(builder: (context) => BottomNavBar()),
     );
   }
   @override
