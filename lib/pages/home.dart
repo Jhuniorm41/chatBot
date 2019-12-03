@@ -18,6 +18,7 @@ class _Home extends State<Home> {
     return new Scaffold(
       appBar: new AppBar(
         centerTitle: true,
+        automaticallyImplyLeading: false,
         title: new Text("Bienvenido"),
       ),
       body: new Column(children: <Widget>[

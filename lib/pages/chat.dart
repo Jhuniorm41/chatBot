@@ -31,7 +31,7 @@ class _HomePageDialogflow extends State<HomePageDialogflow> {
               ),
             ),
             new Container(
-              margin: new EdgeInsets.symmetric(horizontal: 4.0),
+              margin: new EdgeInsets.symmetric(horizontal: 4.0, vertical: 8.0),
               child: new IconButton(
                   icon: new Icon(Icons.send),
                   onPressed: () => _handleSubmitted(_textController.text)),
@@ -78,6 +78,7 @@ class _HomePageDialogflow extends State<HomePageDialogflow> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
+        automaticallyImplyLeading: false,
         centerTitle: true,
         title: new Text(" Consulta AseSoft"),
       ),
