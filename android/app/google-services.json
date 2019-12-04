@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "132092761054",
+    "firebase_url": "https://newagent-ottugb.firebaseio.com",
+    "project_id": "newagent-ottugb",
+    "storage_bucket": "newagent-ottugb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:132092761054:android:1e3598d3c4e14cd21dc34f",
+        "android_client_info": {
+          "package_name": "com.sirius.chatbot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "132092761054-lt8av9osvie6q7jg3vc7ngul67gsi7n0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZrvjzsZ2BjFnQWCn8XMXCzDCbwr1hUX4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "132092761054-srqltjebarp1ap7capke91u2cg2m7qc7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
