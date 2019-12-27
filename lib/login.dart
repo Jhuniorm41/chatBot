@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_login/flutter_facebook_login.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'appBar.dart';
 import 'package:http/http.dart' as http;
@@ -21,8 +22,6 @@ class _LoginState extends State<Login>{
   final _passController = TextEditingController();
   GoogleSignInAccount _currentUser;
   String _contactText;
-
-
 
   // facebook
   void initiateFacebookLogin() async{
@@ -52,10 +51,14 @@ class _LoginState extends State<Login>{
     print(profile['email']);
   }
   // Gmail
-  Future<void> _handleSignIn() async {\
+  Future<void> _handleSignIn() async {
     try {
       await _googleSignIn.signIn();
     } catch (error) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BottomNavBar()),
+      );
       print(error);
     }
   }
@@ -143,11 +146,12 @@ class _LoginState extends State<Login>{
 //      }
       print('usr=> ${_usrController.text}');
       print('pass=> ${_passController.text}');
-
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => BottomNavBar()),
-      );
+      if(_usrController.text == 'junior@gmail.com' && _passController.text == '123456') {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => BottomNavBar()),
+        );
+      } else {}
     }
   }
   @override

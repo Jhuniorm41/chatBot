@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dialogflow/dialogflow_v2.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
 
 class HomePageDialogflow extends StatefulWidget {
@@ -41,7 +42,6 @@ class _HomePageDialogflow extends State<HomePageDialogflow> {
       ),
     );
   }
-
   void Response(query) async {
     _textController.clear();
     AuthGoogle authGoogle =
@@ -56,6 +56,7 @@ class _HomePageDialogflow extends State<HomePageDialogflow> {
       name: "AseSoft",
       type: false,
     );
+    print(message);
     setState(() {
       _messages.insert(0, message);
     });
@@ -80,7 +81,7 @@ class _HomePageDialogflow extends State<HomePageDialogflow> {
       appBar: new AppBar(
         automaticallyImplyLeading: false,
         centerTitle: true,
-        title: new Text(" Consulta AseSoft"),
+        title: new Text(" Consulta AseSoft", style: TextStyle(color: Colors.white)),
       ),
       body: new Column(children: <Widget>[
         new Flexible(
@@ -101,11 +102,26 @@ class _HomePageDialogflow extends State<HomePageDialogflow> {
 }
 
 class ChatMessage extends StatelessWidget {
+
+
   ChatMessage({this.text, this.name, this.type});
 
   final String text;
   final String name;
   final bool type;
+  final FlutterTts flutterTts = new FlutterTts();
+  bool voice = false;
+  speak(String text) {
+    if (!voice) {
+      flutterTts.setLanguage("es-ES");
+      flutterTts.setPitch(1);
+      flutterTts.speak(text);
+      voice = true;
+    } else {
+      flutterTts.stop();
+      voice = false;
+    }
+  }
 
   List<Widget> otherMessage(context) {
     final logo = Hero(
@@ -117,9 +133,12 @@ class ChatMessage extends StatelessWidget {
       ),
     );
     return <Widget>[
-      new Container(
-        margin: const EdgeInsets.only(right: 16.0),
+      new InkWell(
+       // margin: const EdgeInsets.only(right: 16.0),
         child: new CircleAvatar(child: logo),
+          onTap: () {
+            speak(text);
+          }
       ),
       new Expanded(
         child: new Column(
