@@ -81,7 +81,7 @@ class _HomePageDialogflow extends State<HomePageDialogflow> {
       appBar: new AppBar(
         automaticallyImplyLeading: false,
         centerTitle: true,
-        title: new Text(" Consulta AseSoft", style: TextStyle(color: Colors.white)),
+        title: new Text(" Consultame Diver", style: TextStyle(color: Colors.white)),
       ),
       body: new Column(children: <Widget>[
         new Flexible(

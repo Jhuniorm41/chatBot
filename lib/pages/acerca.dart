@@ -27,7 +27,7 @@ class _Acerca extends State<Acerca> {
       appBar: new AppBar(
         centerTitle: true,
         automaticallyImplyLeading: false,
-        title: new Text("Acerca de AseSoft", style: TextStyle(color: Colors.white)),
+        title: new Text("Acerca de Diver", style: TextStyle(color: Colors.white)),
       ),
       body: new Column(children: <Widget>[
         SizedBox(height: 80.0),
@@ -40,16 +40,14 @@ class _Acerca extends State<Acerca> {
         textAC,
         new Divider(height: 2.0),
         textAW,
-        new Divider(height: 2.0),
-        textAP,
-        SizedBox(height: 30.0),
+
         SizedBox(
           width: double.infinity,
           height: 50.0,
           // height: double.infinity,
           child: new IconButton(
             icon: Icon(Icons.link),
-            color: Colors.cyan,
+            color: Colors.purple,
             onPressed: _launchURL,
           ),
         ),
@@ -70,14 +68,13 @@ _launchURL() async {
     throw 'Could not launch $url';
   }
 }
-final textLogo = new Text('AseSoft', textAlign: TextAlign.center, style: TextStyle(fontSize: 38),);
-final textDes = new Text('AseSoft es desarrollado por:',
+final textLogo = new Text('Diver', textAlign: TextAlign.center, style: TextStyle(fontSize: 38),);
+final textDes = new Text('Diver es desarrollado por:',
     textAlign: TextAlign.left, style: TextStyle(fontSize: 25));
-final textAC = new Text('Guzman Martinez Vinx Junior',
+final textAC = new Text('Rosanyela Hurtado Rico',
     textAlign: TextAlign.center, style: TextStyle(fontSize: 20));
-final textAW = new Text('Morales Mamani Wilfredo',
+final textAW = new Text('Ingenieria de Software I',
     textAlign: TextAlign.center, style: TextStyle(fontSize: 20));
-final textAP = new Text('Paco Crispin Alex',
-    textAlign: TextAlign.center, style: TextStyle(fontSize: 20));
+
 final textIr = new Text('Ir a web',
     textAlign: TextAlign.center, style: TextStyle(fontSize: 20));

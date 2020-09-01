@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Dialogflow',
       theme: new ThemeData(
-        primarySwatch: Colors.cyan,
+        primarySwatch: Colors.purple,
       ),
       debugShowCheckedModeBanner: false,
       home: new Login(),

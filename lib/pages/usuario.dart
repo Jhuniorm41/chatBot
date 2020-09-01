@@ -75,15 +75,15 @@ class UsuarioState extends State<Usuario> with TickerProviderStateMixin {
         automaticallyImplyLeading: false,
         elevation: 10.0,
         centerTitle: true,
-        backgroundColor: Colors.cyan,
+        backgroundColor: Colors.purple,
         title: new Text(
-          'Cajón de app ',
+          'Acerca de',
           style: TextStyle(color: Colors.white),
         ),
       ),
       body: ListView(
         children: <Widget>[
-          getListItems(Color(0xFFF44336), Icons.chat, 'Como funciona AseSoft',),
+        //  getListItems(Color(0xFFF44336), Icons.chat, 'Como funciona AseSoft',),
 //          getListItems(Color(0xFFFBC02D), Icons.settings, 'Configuraciones'),
           getListItems(Color(0xFF13B0A5), Icons.copyright, 'Sobre AseSoft'),
         ],

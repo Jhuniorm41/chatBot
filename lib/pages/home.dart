@@ -23,15 +23,15 @@ class _Home extends State<Home> {
       ),
       body: new Column(children: <Widget>[
         new Divider(height: 1.0),
+        textLogo,
+        new Divider(height: 2.0),
+        textDes,
+        new Divider(height: 3.0),
         new Container(
           decoration: new BoxDecoration(color: Theme.of(context).cardColor),
           height: height / 2.1,
           child: myCarusel,
         ),
-        new Divider(height: 1.0),
-        textLogo,
-        new Divider(height: 2.0),
-        textDes,
       ]),
     );
   }
@@ -50,7 +50,7 @@ final myCarusel = Carousel(
     AssetImage('assets/images/card2.png'),
   ],
 );
-final textLogo = new Text('AseSoft', textAlign: TextAlign.center, style: TextStyle(fontSize: 38),);
-final textDes = new Text('AseSoft es una Inteligencia artificial, cual su proposito es poder ayudar a las personas a obtener cualquier '
-    'información sobre los tramites, ya sean estos civiles, judiciales y otros.',
+final textLogo = new Text('Reposteria Diver', textAlign: TextAlign.center, style: TextStyle(fontSize: 38),);
+final textDes = new Text('Diver es una franquicia de resposteria, que mediante el uso de la tecnologia facilita.\n\n'
+    'Obtiene lo que deseas de manera rapida, sencilla y deliciosa.',
     textAlign: TextAlign.center, style: TextStyle(fontSize: 20));

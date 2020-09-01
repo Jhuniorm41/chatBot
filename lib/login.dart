@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_login/flutter_facebook_login.dart';
-import 'package:flutter_tts/flutter_tts.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'appBar.dart';
 import 'package:http/http.dart' as http;
@@ -146,18 +145,23 @@ class _LoginState extends State<Login>{
 //      }
       print('usr=> ${_usrController.text}');
       print('pass=> ${_passController.text}');
-      if(_usrController.text == 'junior@gmail.com' && _passController.text == '123456') {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => BottomNavBar()),
-        );
-      } else {}
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => BottomNavBar()),
+      );
+//      if(_usrController.text == 'junior@gmail.com' && _passController.text == '123456') {
+//        Navigator.push(
+//          context,
+//          MaterialPageRoute(builder: (context) => BottomNavBar()),
+//        );
+//      } else {}
     }
   }
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    final textLogo = new Text('AseSoft', textAlign: TextAlign.center, style: TextStyle(fontSize: 38),);
+    final textLogo = new Text('Diver Reposteria', textAlign: TextAlign.center, style: TextStyle(fontSize: 38),);
+    final textLogoBy = new Text('by Rosanyela', textAlign: TextAlign.center, style: TextStyle(fontSize: 18),);
     final logo = Hero(
       tag: 'hero',
       child: CircleAvatar(
@@ -173,10 +177,11 @@ class _LoginState extends State<Login>{
         child: ListView(
           children: <Widget>[
             SizedBox(height: 80.0),
-            logo,
-            SizedBox(height: 20.0),
             textLogo,
-            SizedBox(height: 50.0),
+            textLogoBy,
+            SizedBox(height: 20.0),
+            logo,
+            SizedBox(height: 30.0),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 40),
               child: Column(
@@ -196,7 +201,7 @@ class _LoginState extends State<Login>{
                     controller: _passController,
                     obscureText: true,
                     decoration: new InputDecoration(
-                      labelText: "Password",
+                      labelText: "Contraseña",
                       fillColor: Colors.white,
                       border: new OutlineInputBorder(
                         borderRadius: new BorderRadius.circular(20.0),
@@ -222,7 +227,7 @@ class _LoginState extends State<Login>{
                           login(context);
                         },
                         child: Text('Iniciar sesión', style: TextStyle(color: Colors.white)),
-                        color: Colors.cyan,
+                        color: Colors.purple,
                         shape: new RoundedRectangleBorder(
                             borderRadius: new BorderRadius.circular(20.0)
                         )
@@ -237,29 +242,29 @@ class _LoginState extends State<Login>{
                         onPressed: (){
                           initiateFacebookLogin();
                         },
-                        child: Text('Iniciar sesión con Facebook', style: TextStyle(color: Colors.white)),
-                        color: Colors.blue,
-                        shape: new RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(20.0)
-                        )
+                        child: Text('Iniciar sesión con Facebook', style: TextStyle(color: Colors.blue)),
+                        color: Colors.white,
+//                        shape: new RoundedRectangleBorder(
+//                            borderRadius: new BorderRadius.circular(20.0)
+//                        )
                     ),
                   ),
                   SizedBox(height: 10.0),
-                  SizedBox(
-                    width: double.infinity,
-                    height: 50.0,
-                    // height: double.infinity,
-                    child: new RaisedButton(
-                        onPressed: (){
-                          _handleSignIn();
-                        },
-                        child: Text('Iniciar sesión con Gmail', style: TextStyle(color: Colors.white)),
-                        color: Colors.redAccent,
-                        shape: new RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(20.0)
-                        )
-                    ),
-                  ),
+//                  SizedBox(
+//                    width: double.infinity,
+//                    height: 50.0,
+//                    // height: double.infinity,
+//                    child: new RaisedButton(
+//                        onPressed: (){
+//                          _handleSignIn();
+//                        },
+//                        child: Text('Iniciar sesión con Gmail', style: TextStyle(color: Colors.white)),
+//                        color: Colors.redAccent,
+//                        shape: new RoundedRectangleBorder(
+//                            borderRadius: new BorderRadius.circular(20.0)
+//                        )
+//                    ),
+//                  ),
                 ],
               ),
             ),
